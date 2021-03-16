@@ -1,0 +1,23 @@
+PROCEDURE touto(VAR a,b :INTEGER)
+VAR
+    P:INTEGER;
+BEGIN
+    P:a;
+    a:=b;
+    b:=P;
+END
+
+ALGORITHM sortInsertion
+VAR
+    arr : ARRAY_OF INTEGER;
+    i,j,n:INTEGER;
+BEGIN
+    n:=arr.length-1;
+    FOR i FROM 0 TO  STEP n  DO
+        j:=i
+        WHILE (j>0 AND arr[j-1]>arr[j]) DO
+            touto(arr[j-1],arr[j])
+            j:=j-1;
+        END_WHILE
+    END_FOR
+END
